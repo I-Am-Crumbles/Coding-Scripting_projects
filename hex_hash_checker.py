@@ -20,21 +20,29 @@ for num in range(4096):
 for i in hex_decimal_list:
   #for loop iterating through list I just created above
   x = i[2:].zfill(3)
-  # setting a string that uses 
-  #print(x)
+  # saving the last 3 digits of each hex number in my list as a string variable
+  #print(x) -- was just to check that I was getting the correct last 3 digits
 
 
-  #padded_num = {x:03}
+  #padded_num = {x:03} -- didn't use this
 
   flag = "FS{hash-I_had_corned_beef_and_hash_" + x +"}"
+  # the unhashed version of the flag missing the last 3 digits concatenated to my x variable containing a string of the last 3 numbers of hex converted numbers
   flag_upper = "FS{hash-I_had_corned_beef_and_hash_" + str(x.upper()) +"}"
-  #print(flag_upper)
+  # have to check against the upper case version of x as well
+  #print(flag_upper) - was just making sure my flag variable worked
 
   guess_upper = hashlib.sha512(flag_upper.encode()).hexdigest()
+  # variable to store each "guess" at the flag in uppercase
   guess_lower = hashlib.sha512(flag.encode()).hexdigest()
-  #print(guess)
+  # variable to store each "guess" at the flag in lowercase
+  #print(guess_lower)-- was just checking that my "guess" variable worked
 
   if guess_lower == flag_hash:
+    #checks of the lower flag guess matches the hash at the top
     print(flag)
+    #prints the flag with the correct 3 hex digits at the end if the guess lower variable ever matches the above flag hash
   elif guess_upper == flag_hash:
+    # checks of the guess upper variable ever matches the flag hash
     print(flag_upper)
+    # prints the flag with the correct 3 hex digits at the end if the guess upper variable ever matches the above flag hash
