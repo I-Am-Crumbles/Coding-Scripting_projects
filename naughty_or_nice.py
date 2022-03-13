@@ -28,12 +28,16 @@ def naughty_or_nice(santa_list):
 
 ### MAIN FUNCTION ###
 def main():
-  
+  #defines a function called main which will open the file and pass it to the helper function
   file_name = sys.argv[1]
+  # sets the second argument passed through the command line to a variable called file_name
   open_file = open(file_name)
+  # the file_name variable should be a file, this opens it and sets it to a new variable called "open_file"
   print(naughty_or_nice(open_file))
+  # print statement to display the results of the helper function being passed the open file
   
 
 ### DUNDER CHECK ###
 if __name__ == "__main__":
   main()
+  #main function being called to start the entire script
