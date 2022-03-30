@@ -10,4 +10,4 @@ scp -rp username@52.1.103.48:/problems/secp-a--services ~Desktop/ehtics
 python3 -m http.server 80 -bind 127.0.0.1
 # from the ethics directory I ran this python module to serve up all the files from that directory on a simple web server at the required IP address and port
 # I then ran the binary that searches for the file at the desired URL and produces a flag when it finds it.
-
+#
