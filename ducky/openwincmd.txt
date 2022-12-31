@@ -1,7 +1,7 @@
 REM Delay keystroke for half a second
 DELAY 500
 REM wait for button press
-WAIT
+WAIT_FOR_BUTTON_PRESS
 REM Press inject windows key + r to search
 GUI r
 REM wait half a second
