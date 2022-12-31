@@ -1,0 +1,14 @@
+REM Delay keystroke for half a second
+DELAY 500
+REM wait for button press
+WAIT
+REM Press inject windows key + r to search
+GUI r
+REM wait half a second
+DELAY 500
+REM Type the string "cmd"
+STRING cmd
+REM wait half a second
+DELAY 500
+REM inject Enter keystroke
+ENTER
