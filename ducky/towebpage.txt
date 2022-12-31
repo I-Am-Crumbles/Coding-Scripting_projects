@@ -1,0 +1,21 @@
+DELAY 500
+REM Wait for button press
+WAIT_FOR_BUTTON_PRESS
+REM Windows + r
+GUI r
+REM delay half of a second
+DELAY 500
+REM Open Google chrome
+STRING chrome.exe
+REM delay half of a second
+DELAY 500
+REM press enter
+ENTER
+REM delay one second
+DELAY 1000
+REM enter website url
+STRING reddit.com
+REM wait half of a second
+DELAY 500
+REM press enter
+ENTER
